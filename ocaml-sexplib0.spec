@@ -12,6 +12,7 @@ Source0:        https://github.com/janestreet/sexplib0/archive/v%{version}/%{nam
 
 BuildRequires:  ocaml
 BuildRequires:  ocaml-findlib
+BuildRequires:  jbuilder
 
 %description
 A Part of Jane Street's Core library The Core suite of libraries is
