@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Name:           ocaml-sexplib0
 Version:        0.11.0
 Release:        0.0%{?dist}
