@@ -10,9 +10,9 @@ License:        Apache-2.0
 URL:            https://github.com/janestreet/sexplib0/
 Source0:        https://github.com/janestreet/sexplib0/archive/v%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:  jbuilder
 BuildRequires:  ocaml
 BuildRequires:  ocaml-findlib
-BuildRequires:  jbuilder
 
 %description
 A Part of Jane Street's Core library The Core suite of libraries is
@@ -42,10 +42,11 @@ sed 's/ocamlopt/ocamlopt -g/g' -i Makefile
 export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 mkdir -p $OCAMLFIND_DESTDIR
-make install
+make install PREFIX=$OCAMLFIND_DESTDIR
 
 %files
 %license LICENSE.txt
+%doc %{_libdir}/ocaml/doc/%{libname}/
 %{_libdir}/ocaml/%{libname}
 %ifarch %{ocaml_native_compiler}
 %exclude %{_libdir}/ocaml/%{libname}/*.a
