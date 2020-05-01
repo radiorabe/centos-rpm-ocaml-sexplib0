@@ -2,7 +2,7 @@
 
 
 Name:           ocaml-sexplib0
-Version:        0.12.0
+Version:        0.13.0
 Release:        0.1%{?dist}
 Summary:        definition of S-expressions and some base converters
 
@@ -63,6 +63,9 @@ dune install --prefix=$OCAMLFIND_DESTDIR --libdir=$OCAMLFIND_DESTDIR
 %endif
 
 %changelog
+* Fri May  1 2020 Lucas Bickel <hairmare@rabe.ch> - 1.13.0-0.1
+* Bump version to 0.13.0
+
 * Sat Aug  3 2019 Lucas Bickel <hairmare@rabe.ch> - 1.12.0-0.1
 - Fix install location
 
